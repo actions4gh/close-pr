@@ -3,7 +3,7 @@
 ❌ Close a GitHub Pull Request as unmerged
 
 <p align=center>
-  <img src="https://i.imgur.com/ZFJpji1.png">
+  <img src="https://i.imgur.com/C56XhjE.png">
 </p>
 
 👨‍💻 Use the [GitHub CLI] \
