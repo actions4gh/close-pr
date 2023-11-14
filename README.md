@@ -1,4 +1,4 @@
-# Create name: Close GitHub Pull Request
+# Close GitHub Pull Request
 
 ❌ Close a GitHub Pull Request as unmerged
 
