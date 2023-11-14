@@ -14,12 +14,12 @@
 **🚀 Here's what you're after:**
 
 ```yml
-name: Lorem Ipsum comment
+name: Close with Lorem Ipsum comment
 on:
-  issues:
+  pull_request:
     types: labeled
 jobs:
-  lorem-ipsum-comment:
+  test-action:
     if: github.event.label.name == 'lorem ipsum'
     permissions:
       pull-requests: write
