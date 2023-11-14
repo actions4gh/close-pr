@@ -1,24 +1,19 @@
-name: Test action
+name: Try me
 on:
-  issues:
+  pull_request:
     types: labeled
 jobs:
   test-action:
-    if: github.event.label.name == 'lorem ipsum'
+    if: github.event.label.name == 'try me'
     permissions:
-      issues: write
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - run: gh issue comment "$NUMBER" --body "$BODY"
+      - run: gh pr close "$NUMBER" --comment "$COMMENT"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
           NUMBER: ${{ github.event.issue.number }}
-          BODY: >
+          COMMENT: >
             Lorem ipsum is placeholder text commonly used in the graphic, print,
             and publishing industries for previewing layouts and visual mockups.
-      - run: gh issue close "$NUMBER" --repo "$REPO"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_REPO: ${{ github.repository }}
-          NUMBER: ${{ github.event.issue.number }}

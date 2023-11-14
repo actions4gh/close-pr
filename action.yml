@@ -1,6 +1,6 @@
-name: Create GitHub Issue comment
-description: 💬 Create a new comment on a GitHub Issue
+name: Close GitHub Pull Request
+description: ❌ Close a GitHub Pull Request as unmerged
 
 branding:
-  icon: message-square
+  icon: x
   color: blue
